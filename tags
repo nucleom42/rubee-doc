@@ -1,0 +1,17 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ChargedString	inits/charged_string.rb	/^module ChargedString$/;"	m
+CreateUsers	db/create_users.rb	/^class CreateUsers$/;"	c
+User	app/models/user.rb	/^class User < Rubee::SequelObject$/;"	c
+WelcomeController	app/controllers/welcome_controller.rb	/^class WelcomeController < Rubee::BaseController$/;"	c
+call	db/create_users.rb	/^  def call$/;"	f	class:CreateUsers
+const.entryPoints	esbuild.config.js	/^const buildOptions = {$/;"	p
+plural?	inits/charged_string.rb	/^    def plural?$/;"	f	class:ChargedString
+pluralize	inits/charged_string.rb	/^    def pluralize$/;"	f	class:ChargedString
+show	app/controllers/welcome_controller.rb	/^  def show$/;"	f	class:WelcomeController
+singular?	inits/charged_string.rb	/^    def singular?$/;"	f	class:ChargedString
+singularize	inits/charged_string.rb	/^    def singularize$/;"	f	class:ChargedString

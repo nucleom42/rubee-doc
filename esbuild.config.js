@@ -2,6 +2,9 @@
 const esbuild = require("esbuild");
 const inlineCss = require("esbuild-plugin-inline-css");
 
+const path = require("path");
+const fs = require("fs");
+
 const buildOptions = {
   entryPoints: ["js/app.js"], // Can be .ts or .tsx too
   outfile: "js/bundle.js",
@@ -25,6 +28,30 @@ async function run() {
     const ctx = await esbuild.context(buildOptions);
     await ctx.watch();
     console.log("👀 Watching for changes...");
+  } else if(process.argv.includes("--deploy")){
+    buildOptions.outfile = "dist/js/bundle.min.js";
+    buildOptions.minify = true;
+
+    await esbuild.build(buildOptions);
+
+    const distDir = path.join(__dirname, "dist");
+    if (!fs.existsSync(distDir)) {
+      fs.mkdirSync(distDir);
+    }
+    
+    // copy images
+    const imagesDir = path.join(__dirname, "images");
+    const distImagesDir = path.join(distDir, "images");
+    if (!fs.existsSync(distImagesDir)) {
+      fs.mkdirSync(distImagesDir);
+    }
+    fs.readdirSync(imagesDir).forEach((file) => {
+      const srcPath = path.join(imagesDir, file);
+      const destPath = path.join(distImagesDir, file);
+      fs.copyFileSync(srcPath, destPath);
+    });
+
+    console.log("✅ Build complete");
   } else {
     await esbuild.build(buildOptions);
     console.log("✅ Build complete");

@@ -6,4 +6,5 @@ db/**/**.db
 node_modules/
 
 # Ignore build output
-dist/js/bundle.js
+dist/js/bundle.min.js
+dist/images/

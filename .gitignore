@@ -1,0 +1,10 @@
+# Ignore DB
+# SQLite database file
+db/**/**.db
+
+# Ignore Node.js dependencies
+node_modules/
+
+# Ignore build output
+dist/js/bundle.min.js
+dist/images/

@@ -3,7 +3,7 @@ Rubee::Configuration.setup(env = :development) do |config|
   config.thread_pool_limit = { env:, value: 5 }
 
   # Uncomment, if you want to use react
-  # config.react = { on: true, env: }
+  config.react = { on: true, env: }
 end
 
 Rubee::Configuration.setup(env = :test) do |config|
@@ -11,7 +11,7 @@ Rubee::Configuration.setup(env = :test) do |config|
   config.thread_pool_limit = { env:, value: 5 }
 
   # Uncomment, if you want to use react
-  # config.react = { on: true, env: } # required if you want to use react
+  config.react = { on: true, env: } # required if you want to use react
 end
 
 Rubee::Configuration.setup(env = :production) do |config|
@@ -19,5 +19,5 @@ Rubee::Configuration.setup(env = :production) do |config|
   config.thread_pool_limit = { env:, value: 5 }
 
   # Uncomment,if you want to use react
-  # config.react = { on: true, env: } # required if you want to use react
+  config.react = { on: true, env: } # required if you want to use react
 end

@@ -30,8 +30,10 @@ async function run() {
     console.log("👀 Watching for changes...");
   } else if(process.argv.includes("--deploy")){
     const distDir = path.join(__dirname, "dist");
-    if (!fs.existsSync(distDir)) {
-      fs.mkdirSync(distDir);
+
+    const jsDir = path.join(distDir, "js");
+    if (!fs.existsSync(jsDir)) {
+      fs.mkdirSync(jsDir);
     }
 
     buildOptions.outfile = "dist/js/bundle.min.js";

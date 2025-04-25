@@ -29,15 +29,15 @@ async function run() {
     await ctx.watch();
     console.log("👀 Watching for changes...");
   } else if(process.argv.includes("--deploy")){
-    buildOptions.outfile = "dist/js/bundle.min.js";
-    buildOptions.minify = true;
-
-    await esbuild.build(buildOptions);
-
     const distDir = path.join(__dirname, "dist");
     if (!fs.existsSync(distDir)) {
       fs.mkdirSync(distDir);
     }
+
+    buildOptions.outfile = "dist/js/bundle.min.js";
+    buildOptions.minify = true;
+
+    await esbuild.build(buildOptions);
     
     // copy images
     const imagesDir = path.join(__dirname, "images");
@@ -45,6 +45,7 @@ async function run() {
     if (!fs.existsSync(distImagesDir)) {
       fs.mkdirSync(distImagesDir);
     }
+    
     fs.readdirSync(imagesDir).forEach((file) => {
       const srcPath = path.join(imagesDir, file);
       const destPath = path.join(distImagesDir, file);

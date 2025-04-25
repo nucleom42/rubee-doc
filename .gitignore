@@ -1,1 +1,7 @@
+# Ignore DB
+# SQLite database file
+db/**/**.db
+
+# Ignore Node.js dependencies
 node_modules/
+

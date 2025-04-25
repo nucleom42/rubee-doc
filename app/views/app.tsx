@@ -8,7 +8,7 @@ const Home = () => (
     <p>Welcome to Reactive Bee ...</p>
     <img src="images/rubee.svg" alt="rubee"></img>
     <nav>
-        <Link to="/home">Home</Link><br />
+        <Link to="/">Home</Link><br />
     </nav>
   </div>
 );
@@ -19,7 +19,7 @@ export function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

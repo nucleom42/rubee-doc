@@ -10,7 +10,7 @@ export default function Aside(){
       </div>
       <ul>
         <li><NavLink  to='/'>Home</NavLink ></li>
-        <li><NavLink  to='/getting_started'>Getting Started</NavLink ></li>
+        <li><NavLink  to='/getting-started'>Getting Started</NavLink ></li>
         <li><NavLink  to='/routing'>Routing</NavLink ></li>
         <li><NavLink  to='/generation'>Generation</NavLink ></li>
         <li><NavLink  to='/views'>Views</NavLink ></li>

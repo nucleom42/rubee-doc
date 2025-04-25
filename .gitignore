@@ -5,3 +5,5 @@ db/**/**.db
 # Ignore Node.js dependencies
 node_modules/
 
+# Ignore build output
+dist/

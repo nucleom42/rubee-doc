@@ -5,7 +5,7 @@ GEM
     byebug (12.0.0)
     coderay (1.1.3)
     ffi (1.17.2-x86_64-linux-gnu)
-    json (2.10.2)
+    json (2.11.3)
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -31,7 +31,7 @@ GEM
       ffi (~> 1.0)
     rerun (0.14.0)
       listen (~> 3.0)
-    ru.Bee (1.5.3)
+    ru.Bee (1.5.4)
       bundler (~> 2.1, >= 2.1.4)
     sequel (5.91.0)
       bigdecimal
